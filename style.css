@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css?family=Tomorrow&display=swap');
+body {
+    font-family: 'Tomorrow', sans-serif;
+    margin-left:5px;
+}
+.car {
+    width: 100px;
+    height: 60px;
+    background: url("https://my.informatics.ru/media/thumbnails/3665838fa9c54cc5833ff776b7d66255") no-repeat center;
+    background-size: cover;
+    /* border: 1px solid darkgray; */
+    position: absolute;
+    opacity:1;
+}
+.barrel {
+    width: 100px;
+    height: 60px;
+    background: url("https://my.informatics.ru/media/thumbnails/d397fc7b9d744e6aaf5382c5aaa0bea4") no-repeat center;
+    background-size: cover;
+    /* border: 1px solid darkgray; */
+    position: absolute;
+}
+.screen{
+    width: 600px;
+    height: 400px;
+    border: 1px solid black;
+    background-color: rgb(223, 223, 223);
+    /* overflow: hidden; */
+
+}
+.overscreen{
+    width: 1000px;
+    height: 400px;
+    /* overflow: hidden; */
+    background-color:white;
+    position: absolute;
+    left: 607px;
+    top: 8px;
+    z-index:100;
+}
+#apt {
+    width:30px;
+    height:30px;
+    background:url("https://my.informatics.ru/media/thumbnails/f85a38279efe4aee874db8c871fdcf0c") no-repeat center;
+    background-size:cover;
+}
+#lives {
+    display:flex;
+    justify-content:center;
+    width: 200px;
+    margin-top:20px;
+}
+#timeout {
+    font-size:24px;
+    display:flex;
+    justify-content:center;
+    width: 200px;
+    margin-top:20px;
+}
+#scorecounter {
+    font-size:24px;
+    display:flex;
+    justify-content:center;
+    width: 200px;
+    margin-top:20px;
+}
+#gameoverlay {
+    display:flex;
+    position:absolute;
+    justify-content:center;
+    align-items:center;
+    width:600px;
+    height:400px;
+    font-size:100px;
+    color:white;
+    text-shadow: 2px 0 0 #000, -2px 0 0 #000, 0 2px 0 #000, 0 -2px 0 #000, 1px 1px #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000;
+    z-index:100;
+}
+#boomimg {
+    position: relative;
+    left:-30px;
+    top:-30px;
+    width:160px;
+    height:110px;
+    /* transition-property:width, height;
+    transition-duration:0.3; */
+}
+button {
+    font-family: 'Tomorrow', sans-serif;
+    margin:10px;
+    font-size:24px;
+    background-color:rgb(206, 206, 206);
+    border:none;
+    border-radius:10px;
+    padding:5px;
+}
+button:active {
+    background-color:rgb(163, 163, 163);
+}
+button:focus{outline:0}
