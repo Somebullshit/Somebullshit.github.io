@@ -14,7 +14,7 @@ let boomrtimeout;
 let score = 0;
 let barrels = [];
 for (i = 0; i < 5; i++) {
-    barrels[i] = createBarrel(i * 130 + 650, randInt(1, 5) * 80 + 10, 10);    
+    barrels[i] = createBarrel(i * 130 + 650, randInt(0, 5) * 80 + 10, 10);    
 }
 // let barrel1 = createBarrel(randInt(600, 1000), randInt(10, 330));
 requestAnimationFrame(game);
@@ -123,7 +123,7 @@ function game() {
         barrels[i].x -= barrels[i].speed;
         if (barrels[i].x <= -100) {
             barrels[i].x = 600;
-            barrels[i].y = randInt(randInt(1, 5), randInt(1, 5)) * 80 + 10;
+            barrels[i].y = randInt(randInt(0, 5), randInt(0, 5)) * 80 + 10;
             barrels[i].style.display = "inline";
         }
     }
