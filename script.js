@@ -235,5 +235,5 @@ function collisionDetection(obj1, obj2) {
 }
 
 window.addEventListener("devicemotion", function(e) {
-    player.y = e.acceleration.x * 100;
+    player.y = e.acceleration.x * 10;
 }, true);
