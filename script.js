@@ -20,7 +20,7 @@ for (i = 0; i < 5; i++) {
     console.log(barrels)
 }
 setTimeout(() => {
-    overscreen.style.width = "130px";
+    overscreen.style.width = "300px";
 }, 1000);
 // let barrel1 = createBarrel(randInt(600, 1000), randInt(10, 330));
 requestAnimationFrame(game);
