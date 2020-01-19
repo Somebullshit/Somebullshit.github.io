@@ -3,6 +3,7 @@ let mainscreen = document.querySelector(".screen");
 let gameover = document.querySelector("#gameover");
 let lasttime = document.querySelector("#timeout");
 let scorecounter = document.querySelector("#scorecounter");
+let overscreen = document.querySelector(".overscreen");
 let timerspeedUp;
 let timerspeedDown;
 let timerspeedlowUp;
@@ -14,8 +15,13 @@ let boomrtimeout;
 let score = 0;
 let barrels = [];
 for (i = 0; i < 5; i++) {
-    barrels[i] = createBarrel(i * 130 + 650, randInt(0, 5) * 80 + 10, 10);    
+    barrels[i] = createBarrel(i * 130 + 650, randInt(0, 5) * 80 + 10, 10);
+    console.log(barrels[i])
+    console.log(barrels)
 }
+setTimeout(() => {
+    overscreen.style.width = "130px";
+}, 1000);
 // let barrel1 = createBarrel(randInt(600, 1000), randInt(10, 330));
 requestAnimationFrame(game);
 let player = createPlayer();
@@ -41,7 +47,7 @@ function createPlayer() {
     player.speed = 0;
     player.width = 92;
     player.height = 45;
-    player.undestr = false;
+    player.undestr = true;
     player.crash = false;
     player.innerHTML = "<img src='boom.png' id='boomimg'>"
     return player;
@@ -123,7 +129,7 @@ function game() {
         barrels[i].x -= barrels[i].speed;
         if (barrels[i].x <= -100) {
             barrels[i].x = 600;
-            barrels[i].y = randInt(randInt(0, 5), randInt(0, 5)) * 80 + 10;
+            barrels[i].y = randInt(0, 5) * 80 + 10;
             barrels[i].style.display = "inline";
         }
     }
@@ -227,3 +233,7 @@ function collisionDetection(obj1, obj2) {
         obj1.height + obj1.y > obj2.y)
 
 }
+
+window.addEventListener("devicemotion", function(e) {
+    player.y = e.acceleration.x * 100;
+}, true);

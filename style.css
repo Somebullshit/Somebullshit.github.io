@@ -29,7 +29,7 @@ body {
 
 }
 .overscreen{
-    width: 1000px;
+    width: 800px;
     height: 400px;
     /* overflow: hidden; */
     background-color:white;
@@ -98,3 +98,17 @@ button:active {
     background-color:rgb(163, 163, 163);
 }
 button:focus{outline:0}
+.overscreenstart {
+    width: 10px;
+    height: 400px;
+    /* overflow: hidden; */
+    background-color:white;
+    position: absolute;
+    left:-5px;
+    top:8px;
+    z-index:100;
+}
+.controll_btn {
+    height:100px;
+    width:100px;
+}
