@@ -47,7 +47,7 @@ function createPlayer() {
     player.speed = 0;
     player.width = 92;
     player.height = 45;
-    player.undestr = true;
+    player.undestr = false;
     player.crash = false;
     player.innerHTML = "<img src='boom.png' id='boomimg'>"
     return player;
@@ -233,7 +233,3 @@ function collisionDetection(obj1, obj2) {
         obj1.height + obj1.y > obj2.y)
 
 }
-
-window.addEventListener("devicemotion", function(e) {
-    player.y = e.acceleration.x * 10;
-}, true);
