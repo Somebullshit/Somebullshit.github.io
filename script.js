@@ -15,7 +15,7 @@ let boomrtimeout;
 let score = 0;
 let barrels = [];
 for (i = 0; i < 5; i++) {
-    barrels[i] = createBarrel(i * 130 + 650, randInt(0, 5) * 80 + 10, 10);
+    barrels[i] = createBarrel(i * 130 + 650, randInt(0, 5) * 80 + 10, 6);
     console.log(barrels[i])
     console.log(barrels)
 }
