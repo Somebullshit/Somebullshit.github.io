@@ -21,7 +21,7 @@ for (i = 0; i < 5; i++) {
 }
 setTimeout(() => {
     overscreen.style.width = "300px";
-}, 1000);
+}, 1500);
 // let barrel1 = createBarrel(randInt(600, 1000), randInt(10, 330));
 requestAnimationFrame(game);
 let player = createPlayer();
